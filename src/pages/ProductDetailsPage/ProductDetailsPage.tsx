@@ -330,9 +330,7 @@ export const ProductDetailsPage = () => {
 
                 <ul className="product-details__actions-description">
                   <li className="product-details__actions-description-box">
-                    <span
-                      className="product-details__actions-description-title"
-                    >
+                    <span className="product-details__actions-description-title">
                       Screen
                     </span>
 

@@ -8,9 +8,8 @@ import { TabletsPage } from './pages/Tablets/TabletsPage';
 import { AccessoriesPage } from './pages/Accessories/AccessoriesPage';
 import { CartPage } from './pages/CartPage/CartPage';
 import { FavoritesPage } from './pages/Favourites/FavoritesPage';
-import {
-  ProductDetailsPage
-} from './pages/ProductDetailsPage/ProductDetailsPage';
+// eslint-disable-next-line max-len
+import { ProductDetailsPage } from './pages/ProductDetailsPage/ProductDetailsPage';
 import { CartProvider } from './contexts/cartContext';
 import { ModalProvider } from './contexts/modalContext';
 import { NotFoundPage } from './pages/NotFoundPage/NotFoundPage';
