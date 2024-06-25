@@ -11,7 +11,7 @@ function getActiveClass({ isActive }: { isActive: boolean }) {
 }
 
 type Props = {
-  onOpen: (bool :boolean) => void
+  onOpen: (bool: boolean) => void;
 };
 
 export const Menu: React.FC<Props> = ({ onOpen }) => {
@@ -22,11 +22,7 @@ export const Menu: React.FC<Props> = ({ onOpen }) => {
   return (
     <div className="menu">
       <div className="menu__top">
-        <NavLink
-          to="/"
-          className="menu__logo"
-          onClick={handleMenuClose}
-        />
+        <NavLink to="/" className="menu__logo" onClick={handleMenuClose} />
 
         <div
           className="menu__close"
@@ -37,15 +33,8 @@ export const Menu: React.FC<Props> = ({ onOpen }) => {
         </div>
       </div>
 
-      <nav
-        className="menu__nav"
-        aria-label="menu-navigation"
-      >
-        <NavLink
-          to="/"
-          className={getActiveClass}
-          onClick={handleMenuClose}
-        >
+      <nav className="menu__nav" aria-label="menu-navigation">
+        <NavLink to="/" className={getActiveClass} onClick={handleMenuClose}>
           Home
         </NavLink>
 

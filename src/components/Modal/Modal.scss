@@ -1,4 +1,4 @@
-@import "../../style-utils/variables.scss";
+@import '../../style-utils/variables.scss';
 
 .modal {
   position: fixed;
@@ -13,7 +13,7 @@
   width: 100vw;
   height: 100vh;
   border: 1px solid $grey-secondary-color;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 
   &__content {
     position: relative;

@@ -5,8 +5,8 @@ export enum SortTypes {
 }
 
 export interface Option {
-  label: string,
-  value: string,
+  label: string;
+  value: string;
 }
 
 export const itemsOnPage = [

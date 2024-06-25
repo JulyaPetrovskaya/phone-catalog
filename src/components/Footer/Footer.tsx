@@ -22,21 +22,14 @@ export const Footer = () => {
 
   return (
     <footer className="footer">
-      <Link
-        to={{ pathname: location.pathname }}
-        className="footer__logo"
-      >
+      <Link to={{ pathname: location.pathname }} className="footer__logo">
         <button
           type="button"
           onClick={backToUp}
           className="logo__image-footer-button"
           aria-label="Back to top"
         >
-          <img
-            src={NiceGadgets}
-            alt="logo"
-            className="logo__image-footer"
-          />
+          <img src={NiceGadgets} alt="logo" className="logo__image-footer" />
         </button>
       </Link>
 

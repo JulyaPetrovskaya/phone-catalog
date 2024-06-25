@@ -12,7 +12,7 @@ export const AccessoriesPage = () => {
     setIsLoading(true);
     try {
       const getAccessoryFromServer = (await getAllProducts()).filter(
-        (product) => product.category === ProductType.Accessories,
+        product => product.category === ProductType.Accessories,
       );
 
       setProductsAccessory(getAccessoryFromServer);

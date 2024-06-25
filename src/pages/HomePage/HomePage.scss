@@ -1,4 +1,4 @@
-@import "../../style-utils/mixins";
+@import '../../style-utils/mixins';
 
 .home-page {
   &__title {
@@ -9,7 +9,7 @@
 
   &__section {
     margin-bottom: 80px;
-      
+
     @include onTablet {
       margin-bottom: 40px;
     }

@@ -13,9 +13,8 @@ import { CartContext } from '../../contexts/cartContext';
 import Hamburger from '../../Images/Icons/Hamburger.svg';
 
 export const Header = () => {
-  const isActiveTab = ({ isActive }: { isActive: boolean }) => classNames(
-    'nav__link', { nav__active: isActive },
-  );
+  const isActiveTab = ({ isActive }: { isActive: boolean }) =>
+    classNames('nav__link', { nav__active: isActive });
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const { isTabletLaptopSize, width } = useViewport();
 
@@ -64,54 +63,36 @@ export const Header = () => {
               </div>
             </li>
 
-            <Link
-              to="/"
-              className="header__logo"
-            />
+            <Link to="/" className="header__logo" />
           </div>
         )}
 
         {!isTabletLaptopSize && (
           <div className="header__container--flex-start">
-            <Link
-              to="/"
-              className="header__logo"
-            />
+            <Link to="/" className="header__logo" />
 
             <nav className="nav">
               <ul className="nav__list">
                 <li className="nav__item">
-                  <NavLink
-                    to="/"
-                    className={isActiveTab}
-                  >
+                  <NavLink to="/" className={isActiveTab}>
                     Home
                   </NavLink>
                 </li>
 
                 <li className="nav__item">
-                  <NavLink
-                    to="/phones"
-                    className={isActiveTab}
-                  >
+                  <NavLink to="/phones" className={isActiveTab}>
                     Phones
                   </NavLink>
                 </li>
 
                 <li className="nav__item">
-                  <NavLink
-                    to="/tablets"
-                    className={isActiveTab}
-                  >
+                  <NavLink to="/tablets" className={isActiveTab}>
                     Tablets
                   </NavLink>
                 </li>
 
                 <li className="nav__item">
-                  <NavLink
-                    to="/accessories"
-                    className={isActiveTab}
-                  >
+                  <NavLink to="/accessories" className={isActiveTab}>
                     Accessories
                   </NavLink>
                 </li>
@@ -121,43 +102,37 @@ export const Header = () => {
         )}
 
         <div className="header__container--flex-end">
-          {!isPathnameHome && (
-            <Search />
-          )}
+          {!isPathnameHome && <Search />}
 
           <NavLink
             to="favorites"
-            className={({ isActive }: { isActive: boolean }) => classNames(
-              'header__favorites',
-              'nav__link',
-              'nav__link--last',
-              { nav__active: isActive },
-            )}
+            className={({ isActive }: { isActive: boolean }) =>
+              classNames('header__favorites', 'nav__link', 'nav__link--last', {
+                nav__active: isActive,
+              })
+            }
           >
             {favorites.length > 0 && (
-              <div className="header__icon-count">
-                {favorites.length}
-              </div>
+              <div className="header__icon-count">{favorites.length}</div>
             )}
           </NavLink>
 
           <NavLink
-            className={({ isActive }: { isActive: boolean }) => classNames(
-              'header__shopping-cart',
-              'nav__link',
-              'nav__link--last',
-              { nav__active: isActive },
-            )}
+            className={({ isActive }: { isActive: boolean }) =>
+              classNames(
+                'header__shopping-cart',
+                'nav__link',
+                'nav__link--last',
+                { nav__active: isActive },
+              )
+            }
             to="cart"
           >
             {cart.length > 0 && (
-              <div className="header__icon-count">
-                {cart.length}
-              </div>
+              <div className="header__icon-count">{cart.length}</div>
             )}
           </NavLink>
         </div>
-
       </div>
     </header>
   );

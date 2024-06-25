@@ -11,9 +11,10 @@ export const Container: React.FC<ContainerProps> = ({ children }) => {
   const { pathname } = useLocation();
 
   return (
-    <div className={classNames('container', {
-      'container--extend': pathname === '/' || pathname.includes('cart'),
-    })}
+    <div
+      className={classNames('container', {
+        'container--extend': pathname === '/' || pathname.includes('cart'),
+      })}
     >
       {children}
     </div>

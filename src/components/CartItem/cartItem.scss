@@ -1,5 +1,5 @@
-@import "../../style-utils/_variables";
-@import "../../style-utils/_mixins";
+@import '../../style-utils/_variables';
+@import '../../style-utils/_mixins';
 
 .cart-item {
   box-sizing: border-box;
@@ -56,7 +56,6 @@
 
     object-fit: contain;
     object-position: center;
-  
   }
 
   &__title {

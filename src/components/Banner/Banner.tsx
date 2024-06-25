@@ -7,11 +7,7 @@ import banner2 from '../../Images/Banner/ipad-new.png';
 import banner3 from '../../Images/Banner/banner-accessories.png';
 
 export const Banner = () => {
-  const bannerImg = [
-    banner1,
-    banner2,
-    banner3,
-  ];
+  const bannerImg = [banner1, banner2, banner3];
 
   const [position, setPosition] = useState(0);
   const imgPosition = -100 * position;

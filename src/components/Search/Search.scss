@@ -1,4 +1,4 @@
-@import "../../style-utils/variables";
+@import '../../style-utils/variables';
 
 .search {
   display: flex;
@@ -20,11 +20,11 @@
     font-family: $basic-font;
     font-size: 14px;
     border: none;
-  
+
     &::placeholder {
       color: $grey-fourth-color;
     }
-  
+
     &:focus {
       outline: none;
     }

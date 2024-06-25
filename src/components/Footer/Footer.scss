@@ -1,5 +1,5 @@
-@import "../../style-utils/mixins";
-@import "../../style-utils/variables";
+@import '../../style-utils/mixins';
+@import '../../style-utils/variables';
 
 .footer {
   box-sizing: border-box;
@@ -49,10 +49,10 @@
       height: 32px;
       width: 32px;
       border: 1px solid $grey-fourth-color;
-      background-image: url("../../Images/Icons/ArrowUp.svg");
+      background-image: url('../../Images/Icons/ArrowUp.svg');
       background-repeat: no-repeat;
       background-position: center;
-  
+
       &:hover {
         border-color: black;
       }

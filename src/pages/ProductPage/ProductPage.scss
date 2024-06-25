@@ -1,11 +1,11 @@
-@import "../../style-utils/variables";
+@import '../../style-utils/variables';
 
 .products-page {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 40px;
-  
+
   &__content {
     display: flex;
     flex-direction: column;

@@ -55,12 +55,14 @@ export const CartPage: React.FC = () => {
   };
 
   const handleQuantityReset = () => {
-    setCart((prev) => prev.map((item) => {
-      return {
-        ...item,
-        quantity: 1,
-      };
-    }));
+    setCart(prev =>
+      prev.map(item => {
+        return {
+          ...item,
+          quantity: 1,
+        };
+      }),
+    );
   };
 
   return (
@@ -101,7 +103,7 @@ export const CartPage: React.FC = () => {
       {isCartFilled ? (
         <div className="cart-page__grid">
           <TransitionGroup className="cart-page__cart-items">
-            {cart.map((cartItem) => (
+            {cart.map(cartItem => (
               <CSSTransition
                 key={cartItem.id}
                 timeout={300}

@@ -68,7 +68,7 @@ export const ProductsList: React.FC<Props> = ({ products }) => {
       )}
 
       <div className="product-list__items" data-cy="productList">
-        {visibleProducts.map((product) => {
+        {visibleProducts.map(product => {
           return <ProductCard key={product.id} product={product} />;
         })}
       </div>

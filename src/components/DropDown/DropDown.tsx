@@ -33,8 +33,8 @@ export const DropDown: React.FC<Props> = ({
   const handleBodyClick = (event: MouseEvent) => {
     // Проверяем, был ли клик вне элемента списка
     if (
-      dropdownRef.current
-      && !dropdownRef.current.contains(event.target as Node)
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
     ) {
       setIsOpen(false);
     }
@@ -48,7 +48,7 @@ export const DropDown: React.FC<Props> = ({
   useEffect(() => {
     const valueParams = searchParams.get(searchName);
 
-    if (valueParams && options.find((option) => option.value === valueParams)) {
+    if (valueParams && options.find(option => option.value === valueParams)) {
       setSelectOption(valueParams);
     } else {
       setSelectOption(initialValue);
@@ -86,7 +86,7 @@ export const DropDown: React.FC<Props> = ({
           'drop-down__is--deactivate': !isOpen,
         })}
       >
-        {options.map((option) => (
+        {options.map(option => (
           <li key={option.label}>
             <Link
               className="drop-down__item"

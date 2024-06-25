@@ -39,10 +39,8 @@ export const BreadCrumbs: React.FC<Props> = ({ productName }) => {
           <p className="breadcrumbs__current">{productName}</p>
         </>
       ) : (
-
         <p className="breadcrumbs__current">{capitalize(directory)}</p>
       )}
-
     </div>
   );
 };

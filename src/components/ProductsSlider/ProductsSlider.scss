@@ -1,5 +1,5 @@
-@import "../../style-utils/variables";
-@import "../../style-utils/mixins";
+@import '../../style-utils/variables';
+@import '../../style-utils/mixins';
 
 .slider {
   --cardSize: 272px;
@@ -8,7 +8,7 @@
   --slideValue: calc(
     var(--itemsVisible) * (var(--cardSize) + var(--sliderGap))
   );
-  
+
   &__header {
     display: flex;
     align-items: center;
@@ -67,7 +67,7 @@
 
   &__btn-left {
     margin-right: 16px;
-    
+
     &--disabled {
       margin-right: 16px;
       border-color: $grey-third-color;

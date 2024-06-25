@@ -41,8 +41,8 @@ export const ContactForm: React.FC = () => {
     const testEmail = regexEmail.test(email.trim());
     const testComment = regexComment.test(comment.trim());
 
-    const success
-      = testComment && testEmail && testName && testPhone && testSurname;
+    const success =
+      testComment && testEmail && testName && testPhone && testSurname;
 
     if (!testName) {
       setNameError('Name must be between 3 and 20 characters');
@@ -90,13 +90,11 @@ export const ContactForm: React.FC = () => {
             placeholder="Name"
             className="contact-form__input"
             value={name}
-            onChange={(e) => setName(e.target.value)}
+            onChange={e => setName(e.target.value)}
           />
 
           {nameError && (
-            <span className="contact-form__error">
-              {nameError}
-            </span>
+            <span className="contact-form__error">{nameError}</span>
           )}
         </div>
 
@@ -107,12 +105,10 @@ export const ContactForm: React.FC = () => {
             placeholder="Surname"
             className="contact-form__input"
             value={surname}
-            onChange={(e) => setSurname(e.target.value)}
+            onChange={e => setSurname(e.target.value)}
           />
           {surnameError && (
-            <span className="contact-form__error">
-              {surnameError}
-            </span>
+            <span className="contact-form__error">{surnameError}</span>
           )}
         </div>
 
@@ -123,7 +119,7 @@ export const ContactForm: React.FC = () => {
             placeholder="Email"
             className="contact-form__input"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={e => setEmail(e.target.value)}
           />
           {emailError && (
             <span className="contact-form__error">{emailError}</span>
@@ -137,7 +133,7 @@ export const ContactForm: React.FC = () => {
             placeholder="Phone number"
             className="contact-form__input"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={e => setPhone(e.target.value)}
           />
           {phoneError && (
             <span className="contact-form__error">{phoneError}</span>
@@ -151,7 +147,7 @@ export const ContactForm: React.FC = () => {
             placeholder="Comment"
             className="contact-form__input"
             value={comment}
-            onChange={(e) => setComment(e.target.value)}
+            onChange={e => setComment(e.target.value)}
           />
           {commentError && (
             <span className="contact-form__error">{commentError}</span>

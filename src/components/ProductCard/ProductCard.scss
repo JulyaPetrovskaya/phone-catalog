@@ -1,5 +1,5 @@
-@import "../../style-utils/variables";
-@import "../../style-utils/mixins";
+@import '../../style-utils/variables';
+@import '../../style-utils/mixins';
 
 .product-card {
   position: relative;
@@ -67,7 +67,7 @@
 
   &:hover {
     box-shadow: 0 3px 13px $grey-box-shadow;
-  
+
     .product-card__img {
       transform: scale(1.05);
       transition: transform 0.3s;
@@ -133,7 +133,7 @@
     color: $green;
     background-color: $white-color;
     border: 1px solid $grey-third-color;
-  
+
     &:hover {
       box-shadow: none;
       color: $red;

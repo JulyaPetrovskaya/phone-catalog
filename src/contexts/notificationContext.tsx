@@ -1,9 +1,12 @@
 import React, {
-  Dispatch, SetStateAction, createContext, useState,
+  Dispatch,
+  SetStateAction,
+  createContext,
+  useState,
 } from 'react';
 
 type Props = {
-  children: React.ReactNode,
+  children: React.ReactNode;
 };
 
 export enum NotificationStatus {
@@ -14,13 +17,13 @@ export enum NotificationStatus {
 }
 
 export type NotificationType = {
-  message: string,
-  color: NotificationStatus,
+  message: string;
+  color: NotificationStatus;
 };
 
 type NotificationContextType = {
-  notification: NotificationType,
-  setNotification: Dispatch<SetStateAction<NotificationType>>,
+  notification: NotificationType;
+  setNotification: Dispatch<SetStateAction<NotificationType>>;
 };
 
 export const NotificationContext = createContext<NotificationContextType>({
@@ -28,9 +31,10 @@ export const NotificationContext = createContext<NotificationContextType>({
   setNotification: () => {},
 });
 
-export const NotificationProvider:React.FC<Props> = ({ children }) => {
+export const NotificationProvider: React.FC<Props> = ({ children }) => {
   const [notification, setNotification] = useState<NotificationType>({
-    message: '', color: NotificationStatus.None,
+    message: '',
+    color: NotificationStatus.None,
   });
 
   return (

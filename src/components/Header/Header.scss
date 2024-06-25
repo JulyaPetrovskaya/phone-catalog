@@ -1,6 +1,6 @@
-@import "../../style-utils/variables";
-@import "../../helpers/sharedStyles";
-@import "../../style-utils/mixins";
+@import '../../style-utils/variables';
+@import '../../helpers/sharedStyles';
+@import '../../style-utils/mixins';
 
 .header {
   width: 100%;
@@ -13,12 +13,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+
     &--flex-start {
       display: flex;
       align-items: center;
     }
-  
+
     &--flex-end {
       display: flex;
     }
@@ -45,14 +45,14 @@
       transform: scale(1.2);
     }
   }
-  
+
   &__favorites {
-    background-image: url("../../Images/Icons/FavouritesHeartLike.svg");
+    background-image: url('../../Images/Icons/FavouritesHeartLike.svg');
     @extend .header-icons;
   }
 
   &__shopping-cart {
-    background-image: url("../../Images/Icons/ShoppingCart.svg");
+    background-image: url('../../Images/Icons/ShoppingCart.svg');
     @extend .header-icons;
   }
 
@@ -117,7 +117,7 @@
       @extend .line;
       transform: scaleX(0);
     }
- 
+
     &:not(.nav__active):hover {
       color: $grey-primery-color;
 
@@ -130,7 +130,7 @@
 
   &__active {
     color: $grey-primery-color;
-  
+
     &::after {
       position: absolute;
       border-radius: 8px;
@@ -139,7 +139,7 @@
       left: 0;
       bottom: 0;
       background: $grey-primery-color;
-      content: "";
+      content: '';
     }
   }
 }

@@ -1,5 +1,5 @@
-@import "../../style-utils/_variables";
-@import "../../style-utils/_mixins";
+@import '../../style-utils/_variables';
+@import '../../style-utils/_mixins';
 
 .cart-page {
   width: 100%;
@@ -141,7 +141,7 @@
     color: $grey-secondary-color;
     text-align: center;
   }
-  
+
   &__empty-image {
     width: 50%;
     display: flex;
@@ -182,7 +182,9 @@
   &-exit-active {
     opacity: 0;
     transform: translateX(-120%);
-    transition: transform 0.6s ease-in-out, opacity 0.5s linear;
+    transition:
+      transform 0.6s ease-in-out,
+      opacity 0.5s linear;
   }
 }
 

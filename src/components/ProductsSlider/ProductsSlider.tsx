@@ -14,17 +14,15 @@ type Props = {
 };
 
 export const ProductsSlider: React.FC<Props> = ({ title, products }) => {
-  const {
-    width, isMobileSize, isTabletSize, isLaptopSize, isDesktopSize,
-  }
-    = useViewport();
+  const { width, isMobileSize, isTabletSize, isLaptopSize, isDesktopSize } =
+    useViewport();
 
   const [position, setPosition] = useState(0);
   const [itemsVisible, setItemsVisible] = useState(4);
   const visibleProducts = products.slice(0, 21);
   const maxPosition = -(
-    (visibleProducts.length - itemsVisible)
-    * (cardWidth + gap)
+    (visibleProducts.length - itemsVisible) *
+    (cardWidth + gap)
   );
 
   const clickNext = () => {
@@ -103,7 +101,7 @@ export const ProductsSlider: React.FC<Props> = ({ title, products }) => {
             width: cardWidth * visibleProducts.length,
           }}
         >
-          {visibleProducts.map((product) => {
+          {visibleProducts.map(product => {
             return (
               <li className="slider__item" key={product.id}>
                 <ProductCard product={product} />

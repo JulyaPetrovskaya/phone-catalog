@@ -1,6 +1,4 @@
-import {
-  Dispatch, SetStateAction, createContext, useContext,
-} from 'react';
+import { Dispatch, SetStateAction, createContext, useContext } from 'react';
 import { useLocalStorage } from '../helpers/useLocalStorage';
 import { CartItemType } from '../types/сartItemType';
 import { Product } from '../types/Product';
@@ -28,14 +26,14 @@ export const CartProvider: React.FC<Props> = ({ children }) => {
   const [cart, setCart] = useLocalStorage<CartItemType[]>('cart', []);
   const { setNotification } = useContext(NotificationContext);
   const isInCart = (product: Product) => {
-    return cart.some((cartItem) => cartItem.product.id === product.id);
+    return cart.some(cartItem => cartItem.product.id === product.id);
   };
 
   const handleCart = (product: Product) => {
     if (isInCart(product)) {
-      setCart((prev) => prev.filter(
-        (cartItem) => cartItem.product.id !== product.id,
-      ));
+      setCart(prev =>
+        prev.filter(cartItem => cartItem.product.id !== product.id),
+      );
       setNotification({
         message: 'Deleted from cart',
         color: NotificationStatus.Error,
@@ -47,7 +45,7 @@ export const CartProvider: React.FC<Props> = ({ children }) => {
         product,
       } as CartItemType;
 
-      setCart((prev) => [...prev, newCartItem]);
+      setCart(prev => [...prev, newCartItem]);
       setNotification({
         message: 'Added to cart',
         color: NotificationStatus.Success,

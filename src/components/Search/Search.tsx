@@ -13,8 +13,9 @@ export const Search = () => {
   const query = searchParams.get('query') || '';
 
   const onQueryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchParams(getSearchWith(searchParams,
-      { query: event.target.value || null }));
+    setSearchParams(
+      getSearchWith(searchParams, { query: event.target.value || null }),
+    );
   };
 
   const isClearSearch = () => {
@@ -33,11 +34,7 @@ export const Search = () => {
         />
       </label>
 
-      <button
-        type="button"
-        className="search__img"
-        onClick={isClearSearch}
-      >
+      <button type="button" className="search__img" onClick={isClearSearch}>
         {query ? (
           <img src={closeIcon} alt={closeIcon} />
         ) : (

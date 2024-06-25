@@ -1,21 +1,25 @@
 import React, {
-  Dispatch, SetStateAction, createContext, useState,
+  Dispatch,
+  SetStateAction,
+  createContext,
+  useState,
 } from 'react';
 
 type Props = {
-  children: React.ReactNode,
+  children: React.ReactNode;
 };
 
 type ModalContextType = {
-  isOpen: boolean,
-  setIsOpen: Dispatch<SetStateAction<boolean>>,
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 };
 
 export const ModalContext = createContext<ModalContextType>({
-  isOpen: false, setIsOpen: () => {},
+  isOpen: false,
+  setIsOpen: () => {},
 });
 
-export const ModalProvider:React.FC<Props> = ({ children }) => {
+export const ModalProvider: React.FC<Props> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

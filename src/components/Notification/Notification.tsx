@@ -1,7 +1,5 @@
 /* eslint-disable consistent-return */
-import {
-  useContext, useEffect, useState, useRef,
-} from 'react';
+import { useContext, useEffect, useState, useRef } from 'react';
 import './Notification.scss';
 import { CSSTransition } from 'react-transition-group';
 import { NotificationContext } from '../../contexts/notificationContext';

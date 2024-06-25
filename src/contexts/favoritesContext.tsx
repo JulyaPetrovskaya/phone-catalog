@@ -1,6 +1,4 @@
-import {
-  Dispatch, SetStateAction, createContext, useContext,
-} from 'react';
+import { Dispatch, SetStateAction, createContext, useContext } from 'react';
 import { useLocalStorage } from '../helpers/useLocalStorage';
 import { Product } from '../types/Product';
 import { NotificationContext, NotificationStatus } from './notificationContext';
@@ -27,19 +25,19 @@ export const FavouritesProvider: React.FC<Props> = ({ children }) => {
   const [favorites, setFavorites] = useLocalStorage<Product[]>('favorites', []);
   const { setNotification } = useContext(NotificationContext);
   const isInFavorites = (product: Product) => {
-    return favorites.some((favor) => favor.id === product.id);
+    return favorites.some(favor => favor.id === product.id);
   };
 
   const handleFavorites = (product: Product) => {
     if (isInFavorites(product)) {
-      setFavorites((prev) => prev.filter((favor) => favor.id !== product.id));
+      setFavorites(prev => prev.filter(favor => favor.id !== product.id));
 
       setNotification({
         message: 'Deleted from favorites',
         color: NotificationStatus.Error,
       });
     } else {
-      setFavorites((prev) => [...prev, product]);
+      setFavorites(prev => [...prev, product]);
 
       setNotification({
         message: 'Added to favorites',

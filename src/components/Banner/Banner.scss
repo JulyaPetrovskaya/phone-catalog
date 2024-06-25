@@ -1,5 +1,5 @@
-@import "../../style-utils/variables";
-@import "../../style-utils/mixins";
+@import '../../style-utils/variables';
+@import '../../style-utils/mixins';
 
 .banner {
   --gap: 16px;
@@ -19,9 +19,10 @@
     display: flex;
     width: calc(100% - ((var(--button-width) * 2) + (var(--gap) * 2)));
     height: 432px;
-    
+
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 4px,
+    box-shadow:
+      rgba(0, 0, 0, 0.4) 0 2px 4px,
       rgba(0, 0, 0, 0.3) 0 7px 13px -3px,
       rgba(0, 0, 0, 0.2) 0 -3px 0 inset;
 
@@ -34,7 +35,7 @@
       height: 200px;
     }
   }
-  
+
   &__list {
     display: flex;
     width: 100%;
@@ -61,13 +62,13 @@
         border-color: $border-color;
       }
     }
-  
+
     &--left {
       background-image: url(../../Images/Icons/ArrowLeft.svg);
       background-repeat: no-repeat;
       background-position: center;
     }
-  
+
     &--right {
       background-image: url(../../Images/Icons/ArrowRight.svg);
       background-repeat: no-repeat;

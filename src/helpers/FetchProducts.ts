@@ -1,22 +1,23 @@
 import { Product } from '../types/Product';
 
-export const URL_NEW
- = 'https://JulyaPetrovskaya.github.io/react_phone-catalog/new/products.json';
-export const detailsURL
- = 'https://JulyaPetrovskaya.github.io/react_phone-catalog/src/api/';
+export const URL_NEW =
+  'https://JulyaPetrovskaya.github.io/react_phone-catalog/new/products.json';
+export const detailsURL =
+  'https://JulyaPetrovskaya.github.io/react_phone-catalog/src/api/';
 
-export const URL_JSON
- = 'https://JulyaPetrovskaya.github.io/react_phone-catalog/new/';
+export const URL_JSON =
+  'https://JulyaPetrovskaya.github.io/react_phone-catalog/new/';
 
 export const getProducts = <T>(url: string): Promise<T> => {
-  return fetch(url)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to fetch: ${response.status} ${response.statusText}`);
-      }
+  return fetch(url).then(response => {
+    if (!response.ok) {
+      throw new Error(
+        `Failed to fetch: ${response.status} ${response.statusText}`,
+      );
+    }
 
-      return response.json();
-    });
+    return response.json();
+  });
 };
 
 export const getAllProducts = async () => {
@@ -29,7 +30,7 @@ export const getHotProducts = async () => {
   const products: Product[] = await getProducts(URL_NEW);
 
   return products.sort(
-    (a, b) => (b.fullPrice - b.price) - (a.fullPrice - a.price),
+    (a, b) => b.fullPrice - b.price - (a.fullPrice - a.price),
   );
 };
 
@@ -57,8 +58,9 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 export function getShuffleProducts() {
-  return getAllProducts()
-    .then(phones => shuffleArray<Product>([...phones]).slice(0, 20));
+  return getAllProducts().then(phones =>
+    shuffleArray<Product>([...phones]).slice(0, 20),
+  );
 }
 
 const wait = (delay: number) => {

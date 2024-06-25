@@ -22,23 +22,27 @@ export const CartItem: React.FC<Props> = ({ item }) => {
   const isPlusDisabled = item.quantity === 10;
 
   const handleDelete = () => {
-    setCart((prev) => prev.filter((cartItem) => cartItem.id !== item.id));
+    setCart(prev => prev.filter(cartItem => cartItem.id !== item.id));
   };
 
   const handlePlusQuantity = () => {
-    setCart((prev) => prev.map((cartItem) => {
-      return cartItem.id === item.id
-        ? { ...cartItem, quantity: cartItem.quantity + 1 }
-        : cartItem;
-    }));
+    setCart(prev =>
+      prev.map(cartItem => {
+        return cartItem.id === item.id
+          ? { ...cartItem, quantity: cartItem.quantity + 1 }
+          : cartItem;
+      }),
+    );
   };
 
   const handleMinusQuantity = () => {
-    setCart((prev) => prev.map((cartItem) => {
-      return cartItem.id === item.id
-        ? { ...cartItem, quantity: cartItem.quantity - 1 }
-        : cartItem;
-    }));
+    setCart(prev =>
+      prev.map(cartItem => {
+        return cartItem.id === item.id
+          ? { ...cartItem, quantity: cartItem.quantity - 1 }
+          : cartItem;
+      }),
+    );
   };
 
   return (
@@ -92,7 +96,6 @@ export const CartItem: React.FC<Props> = ({ item }) => {
         >
           <img src={Plus} alt="Plus" />
         </button>
-
       </div>
 
       <span className="cart-item__price">{`$${item.product.price}`}</span>

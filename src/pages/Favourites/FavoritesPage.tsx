@@ -38,9 +38,7 @@ export const FavoritesPage: React.FC = () => {
       </div>
 
       <div className="favorites-page__wrap">
-        <h1 className="favorites-page__title">
-          Favoruites
-        </h1>
+        <h1 className="favorites-page__title">Favoruites</h1>
 
         {favorites.length > 0 && !searchQuery && (
           <button
@@ -56,9 +54,7 @@ export const FavoritesPage: React.FC = () => {
       {favorites.length > 0 ? (
         <>
           {filteredFavorites.length > 0 ? (
-            <ProductsList
-              products={filteredFavorites}
-            />
+            <ProductsList products={filteredFavorites} />
           ) : (
             <NoSearchResults />
           )}

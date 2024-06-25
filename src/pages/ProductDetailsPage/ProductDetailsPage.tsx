@@ -1,8 +1,6 @@
 import classNames from 'classnames';
 import { useLocation, useNavigate } from 'react-router-dom';
-import {
-  useState, useEffect, useContext, Fragment,
-} from 'react';
+import { useState, useEffect, useContext, Fragment } from 'react';
 import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { BackButton } from '../../components/BackButton/BackButton';
 
@@ -56,7 +54,7 @@ export const ProductDetailsPage = () => {
   const category = location.pathname.split('/')[1];
 
   const { pathname } = location;
-  const productAdress = pathname.split('/').filter((item) => item !== '');
+  const productAdress = pathname.split('/').filter(item => item !== '');
   const productId = productAdress[productAdress.length - 1];
 
   const [products, setProducts] = useState<Product[] | null>(null);
@@ -74,15 +72,15 @@ export const ProductDetailsPage = () => {
   };
 
   const handleColorChange = (color: string) => {
-    const Url
-      = `/${productInfo?.category}/${details?.namespaceId}-${details?.capacity}-${color}`.toLowerCase();
+    const Url =
+      `/${productInfo?.category}/${details?.namespaceId}-${details?.capacity}-${color}`.toLowerCase();
 
     navigate(Url);
   };
 
   const handleCapacityChange = (capacity: string) => {
-    const Url
-      = `/${productInfo?.category}/${details?.namespaceId}-${capacity}-${details?.color}`.toLowerCase();
+    const Url =
+      `/${productInfo?.category}/${details?.namespaceId}-${capacity}-${details?.color}`.toLowerCase();
 
     navigate(Url);
   };
@@ -116,7 +114,7 @@ export const ProductDetailsPage = () => {
 
       const allProducts = await getAllProducts();
       const currentProduct = allProducts.find(
-        (prod) => prod.itemId === productId,
+        prod => prod.itemId === productId,
       );
 
       if (!currentProduct) {
@@ -128,7 +126,7 @@ export const ProductDetailsPage = () => {
       setProductInfo(currentProduct);
 
       const currentDetails = productsDetails.find(
-        (prodDetails) => prodDetails.id === currentProduct.itemId,
+        prodDetails => prodDetails.id === currentProduct.itemId,
       );
 
       if (!currentDetails) {
@@ -201,7 +199,7 @@ export const ProductDetailsPage = () => {
           <section className="product-details__section">
             <div className="product-details__grid">
               <div className="product-details__small-photos">
-                {details.images.map((image) => (
+                {details.images.map(image => (
                   <div
                     key={image}
                     className={classNames(
@@ -238,7 +236,7 @@ export const ProductDetailsPage = () => {
                   </p>
 
                   <div className="product-details__colors-container">
-                    {details.colorsAvailable.map((color) => (
+                    {details.colorsAvailable.map(color => (
                       <button
                         key={color}
                         type="button"
@@ -267,7 +265,7 @@ export const ProductDetailsPage = () => {
                   </p>
 
                   <div className="product-details__capacity-button-container">
-                    {details.capacityAvailable.map((capacity) => (
+                    {details.capacityAvailable.map(capacity => (
                       <button
                         key={capacity}
                         type="button"
@@ -332,61 +330,41 @@ export const ProductDetailsPage = () => {
 
                 <ul className="product-details__actions-description">
                   <li className="product-details__actions-description-box">
-                    <span
-                      className="product-details__actions-description-title"
-                    >
+                    <span className="product-details__actions-description-title">
                       Screen
                     </span>
 
-                    <span
-                      className="product-details__actions-description-value"
-                    >
+                    <span className="product-details__actions-description-value">
                       {details.screen}
                     </span>
                   </li>
 
-                  <li
-                    className="product-details__actions-description-box"
-                  >
-                    <span
-                      className="product-details__actions-description-title"
-                    >
+                  <li className="product-details__actions-description-box">
+                    <span className="product-details__actions-description-title">
                       Resolution
                     </span>
 
-                    <span
-                      className="product-details__actions-description-value"
-                    >
+                    <span className="product-details__actions-description-value">
                       {details.resolution}
                     </span>
                   </li>
 
                   <li className="product-details__actions-description-box">
-                    <span
-                      className="product-details__actions-description-title"
-                    >
+                    <span className="product-details__actions-description-title">
                       Processor
                     </span>
 
-                    <span
-                      className="product-details__actions-description-value"
-                    >
+                    <span className="product-details__actions-description-value">
                       {details.processor}
                     </span>
                   </li>
 
-                  <li
-                    className="product-details__actions-description-box"
-                  >
-                    <span
-                      className="product-details__actions-description-title"
-                    >
+                  <li className="product-details__actions-description-box">
+                    <span className="product-details__actions-description-title">
                       RAM
                     </span>
 
-                    <span
-                      className="product-details__actions-description-value"
-                    >
+                    <span className="product-details__actions-description-value">
                       {details.ram}
                     </span>
                   </li>
@@ -403,7 +381,7 @@ export const ProductDetailsPage = () => {
                 <div className="product-details__underline" />
 
                 <div className="product-details__about-description">
-                  {details.description.map((article) => (
+                  {details.description.map(article => (
                     <article
                       key={article.title}
                       className="product-details__about-article"
@@ -411,7 +389,7 @@ export const ProductDetailsPage = () => {
                       <h3 className="product-details__third-title">
                         {article.title}
                       </h3>
-                      {article.text.map((text) => (
+                      {article.text.map(text => (
                         <p className="product-details__about-text" key={text}>
                           {text}
                         </p>

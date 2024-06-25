@@ -12,7 +12,7 @@ type Props = {
 };
 
 export const getLengthByCategory = (arr: Product[], category: string) => {
-  return arr.filter((pr) => pr.category === category).length;
+  return arr.filter(pr => pr.category === category).length;
 };
 
 export const Categories: React.FC<Props> = ({ products }) => {
@@ -31,9 +31,7 @@ export const Categories: React.FC<Props> = ({ products }) => {
           </div>
           <h3 className="category__name">Mobile phones</h3>
           <div className="category__count">
-            {getLengthByCategory(products, ProductType.Phone)}
-            {' '}
-            models
+            {getLengthByCategory(products, ProductType.Phone)} models
           </div>
         </Link>
 
@@ -43,9 +41,7 @@ export const Categories: React.FC<Props> = ({ products }) => {
           </div>
           <h3 className="category__name">Tablets</h3>
           <div className="category__count">
-            {getLengthByCategory(products, ProductType.Tablet)}
-            {' '}
-            models
+            {getLengthByCategory(products, ProductType.Tablet)} models
           </div>
         </Link>
 
@@ -59,9 +55,7 @@ export const Categories: React.FC<Props> = ({ products }) => {
           </div>
           <h3 className="category__name">Accessories</h3>
           <div className="category__count">
-            {getLengthByCategory(products, ProductType.Accessories)}
-            {' '}
-            models
+            {getLengthByCategory(products, ProductType.Accessories)} models
           </div>
         </Link>
       </div>

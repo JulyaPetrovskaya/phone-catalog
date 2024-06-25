@@ -1,12 +1,12 @@
-@import "../../style-utils/mixins.scss";
-@import "../../style-utils/variables.scss";
+@import '../../style-utils/mixins.scss';
+@import '../../style-utils/variables.scss';
 
 .category {
   &__title {
     @include h1Text;
     margin-bottom: 24px;
   }
-  
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -48,7 +48,6 @@
       &:hover {
         background-color: #9664d3;
       }
-
     }
 
     &--tablets {
@@ -66,12 +65,13 @@
         background-color: #b92e63;
       }
     }
-    
+
     &:hover {
       transform: translateY(-10px);
       border-top-right-radius: 30px;
       border-bottom-left-radius: 30px;
-      box-shadow: 0 25px 20px -20px rgba(0, 0, 0, 0.45),
+      box-shadow:
+        0 25px 20px -20px rgba(0, 0, 0, 0.45),
         25px 0 20px -20px rgba(0, 0, 0, 0.45);
       transition: all 0.3s ease-in-out;
 

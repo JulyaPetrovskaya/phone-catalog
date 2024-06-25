@@ -1,4 +1,4 @@
-@import "./variables.scss";
+@import './variables.scss';
 
 @mixin containerBase {
   max-width: 1440px;
@@ -188,7 +188,7 @@
   height: 30px;
   margin-left: 25px;
   position: relative;
-  background-image: url("../Images/Icons/logo.svg");
+  background-image: url('../Images/Icons/logo.svg');
   background-repeat: no-repeat;
   background-size: contain;
   transition: transform 0.3s ease;

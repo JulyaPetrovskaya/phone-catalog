@@ -5,9 +5,9 @@ import { getNumbers } from './getNumbers';
 import { getSearchWith } from '../../helpers/searchHelper';
 
 type Props = {
-  totalItems: number,
-  perPage: number,
-  currentPage: number
+  totalItems: number;
+  perPage: number;
+  currentPage: number;
 };
 
 export const Pagination: React.FC<Props> = ({
@@ -38,10 +38,9 @@ export const Pagination: React.FC<Props> = ({
         })}
         data-cy="paginationLeft"
         to={{
-          search: getSearchWith(
-            searchParams,
-            { page: (currentPage - 1).toString() },
-          ),
+          search: getSearchWith(searchParams, {
+            page: (currentPage - 1).toString(),
+          }),
         }}
         aria-disabled={isFirstPage}
       />
@@ -52,10 +51,7 @@ export const Pagination: React.FC<Props> = ({
             <Link
               className="pagination__link"
               to={{
-                search: getSearchWith(
-                  searchParams,
-                  { page: '1' },
-                ),
+                search: getSearchWith(searchParams, { page: '1' }),
               }}
             >
               1
@@ -79,10 +75,9 @@ export const Pagination: React.FC<Props> = ({
             <Link
               className="pagination__link"
               to={{
-                search: getSearchWith(
-                  searchParams,
-                  { page: pageNumber.toString() },
-                ),
+                search: getSearchWith(searchParams, {
+                  page: pageNumber.toString(),
+                }),
               }}
             >
               {pageNumber}
@@ -101,10 +96,9 @@ export const Pagination: React.FC<Props> = ({
             <Link
               className="pagination__link"
               to={{
-                search: getSearchWith(
-                  searchParams,
-                  { page: totalPages.toString() },
-                ),
+                search: getSearchWith(searchParams, {
+                  page: totalPages.toString(),
+                }),
               }}
             >
               {totalPages}
@@ -114,15 +108,16 @@ export const Pagination: React.FC<Props> = ({
       </ul>
 
       <Link
-        className={classNames('pagination__button',
+        className={classNames(
+          'pagination__button',
           'pagination__button-right',
-          { 'pagination__button-right--disabled': isLastPage })}
+          { 'pagination__button-right--disabled': isLastPage },
+        )}
         data-cy="paginationRight"
         to={{
-          search: getSearchWith(
-            searchParams,
-            { page: (currentPage + 1).toString() },
-          ),
+          search: getSearchWith(searchParams, {
+            page: (currentPage + 1).toString(),
+          }),
         }}
         aria-disabled={isLastPage}
       />
