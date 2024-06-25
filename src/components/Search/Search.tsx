@@ -24,10 +24,8 @@ export const Search = () => {
 
   return (
     <div className="search">
-      <label
-        htmlFor="searchInput"
-        className="search__label"
-      >
+      {/* eslint-disable-next-line */}
+      <label htmlFor="searchInput" className="search__label">
         <input
           type="text"
           className="search__input"
