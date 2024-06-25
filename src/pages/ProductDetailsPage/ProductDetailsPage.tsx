@@ -330,37 +330,36 @@ export const ProductDetailsPage = () => {
 
                 <ul className="product-details__actions-description">
                   <li className="product-details__actions-description-box">
+                    {/* eslint disable-next-line */}
                     <span className="product-details__actions-description-title">
                       Screen
                     </span>
 
-                    <span
-                      className="product-details__actions-description-value"
-                    >
+                    {/* eslint disable-next-line */}
+                    <span className="product-details__actions-description-value">
                       {details.screen}
                     </span>
                   </li>
 
                   <li className="product-details__actions-description-box">
-                    <span
-                      className="product-details__actions-description-title"
-                    >
+                    {/* eslint disable-next-line */}
+                    <span className="product-details__actions-description-title">
                       Resolution
                     </span>
 
-                    <span
-                      className="product-details__actions-description-value"
-                    >
+                    {/* eslint disable-next-line */}
+                    <span className="product-details__actions-description-value">
                       {details.resolution}
                     </span>
                   </li>
 
                   <li className="product-details__actions-description-box">
-                  {/* eslint disable-next-line */}
+                    {/* eslint disable-next-line */}
                     <span className="product-details__actions-description-title">
                       Processor
                     </span>
-                  {/* eslint disable-next-line */}
+
+                    {/* eslint disable-next-line */}
                     <span className="product-details__actions-description-value">
                       {details.processor}
                     </span>
