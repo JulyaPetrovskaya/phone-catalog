@@ -29,7 +29,6 @@ export const Search = () => {
         className="search__label"
       >
         <input
-          id="searchInput"
           type="text"
           className="search__input"
           value={query}

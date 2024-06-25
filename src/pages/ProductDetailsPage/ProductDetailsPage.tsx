@@ -356,29 +356,24 @@ export const ProductDetailsPage = () => {
                   </li>
 
                   <li className="product-details__actions-description-box">
-                    <span
-                      className="product-details__actions-description-title"
-                    >
+                  {/* eslint disable-next-line */}
+                    <span className="product-details__actions-description-title">
                       Processor
                     </span>
-
-                    <span
-                      className="product-details__actions-description-value"
-                    >
+                  {/* eslint disable-next-line */}
+                    <span className="product-details__actions-description-value">
                       {details.processor}
                     </span>
                   </li>
 
                   <li className="product-details__actions-description-box">
-                    <span
-                      className="product-details__actions-description-title"
-                    >
+                    {/* eslint disable-next-line */}
+                    <span className="product-details__actions-description-title">
                       RAM
                     </span>
 
-                    <span
-                      className="product-details__actions-description-value"
-                    >
+                    {/* eslint disable-next-line */}
+                    <span className="product-details__actions-description-value">
                       {details.ram}
                     </span>
                   </li>
