@@ -330,41 +330,57 @@ export const ProductDetailsPage = () => {
 
                 <ul className="product-details__actions-description">
                   <li className="product-details__actions-description-box">
-                    <span className="product-details__actions-description-title">
+                    <span
+                      className="product-details__actions-description-title"
+                    >
                       Screen
                     </span>
 
-                    <span className="product-details__actions-description-value">
+                    <span
+                      className="product-details__actions-description-value"
+                    >
                       {details.screen}
                     </span>
                   </li>
 
                   <li className="product-details__actions-description-box">
-                    <span className="product-details__actions-description-title">
+                    <span
+                      className="product-details__actions-description-title"
+                    >
                       Resolution
                     </span>
 
-                    <span className="product-details__actions-description-value">
+                    <span
+                      className="product-details__actions-description-value"
+                    >
                       {details.resolution}
                     </span>
                   </li>
 
                   <li className="product-details__actions-description-box">
-                    <span className="product-details__actions-description-title">
+                    <span
+                      className="product-details__actions-description-title"
+                    >
                       Processor
                     </span>
 
-                    <span className="product-details__actions-description-value">
+                    <span
+                      className="product-details__actions-description-value"
+                    >
                       {details.processor}
                     </span>
                   </li>
 
                   <li className="product-details__actions-description-box">
-                    <span className="product-details__actions-description-title">
+                    <span
+                      className="product-details__actions-description-title"
+                    >
                       RAM
                     </span>
 
-                    <span className="product-details__actions-description-value">
+                    <span
+                      className="product-details__actions-description-value"
+                    >
                       {details.ram}
                     </span>
                   </li>
