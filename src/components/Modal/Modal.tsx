@@ -5,7 +5,11 @@ import { ReactSVG } from 'react-svg';
 import { ModalContext } from '../../contexts/modalContext';
 import './Modal.scss';
 
-export const Modal: React.FC = ({ children }) => {
+interface ModalProps {
+  children: React.ReactNode;
+}
+
+export const Modal: React.FC<ModalProps> = ({ children }) => {
   const { isOpen, setIsOpen } = useContext(ModalContext);
 
   const handleModalClick = (
