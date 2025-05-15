@@ -23,9 +23,6 @@ Technologies used:
    d) placeholder
 
    how to set up the project locally
-   1. Clone the repository:
-   git clone https://github.com/JulyaPetrovskaya/phone-catalog.git
-   2. Install dependencies:
-   npm install
-   3. Run the project locally:
-   npm start
+1. Clone the repository: `git clone https://github.com/JulyaPetrovskaya/phone-catalog.git`
+2. Install dependencies: `npm install`
+3. Run the project locally: `npm start`
