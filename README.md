@@ -21,17 +21,12 @@ Technologies used:
    b) cycle @for
    c) @extend
    d) placeholder
-     
-   
-
 
    **how to set up the project locally:**
 1. Clone the repository: `git clone https://github.com/JulyaPetrovskaya/phone-catalog.git`
 2. Install dependencies: `npm install`
 3. Run the project locally: `npm start`  
   
-   
-
    **Features:**
 1. Responsive Design: Optimized for different screen sizes and devices, responses on width 480px, 768px, 1024px, 1440px,
 2. Navigation react-router-dom library is used in the application to enable navigation between multiple pages, and URL-based search parameters saved when navigating
