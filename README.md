@@ -3,7 +3,7 @@ Its a figma page for Phone catalog. -[figma](https://www.figma.com/design/uEetgW
 Link to preview on github pages:
 
 Project Name 
-### Phone catalog 📱 - [DEMO LINK] (https://julyapetrovskaya.github.io/phone-catalog)
+### Phone catalog 📱 - [DEMO LINK](https://julyapetrovskaya.github.io/phone-catalog)
 
 Technologies used:
 
