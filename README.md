@@ -20,7 +20,8 @@ Technologies used:
    a) @mixin
    b) cycle @for
    c) @extend
-   d) placeholder  
+   d) placeholder
+     
    
 
 
@@ -28,7 +29,7 @@ Technologies used:
 1. Clone the repository: `git clone https://github.com/JulyaPetrovskaya/phone-catalog.git`
 2. Install dependencies: `npm install`
 3. Run the project locally: `npm start`  
-
+  
    
 
    **Features:**
