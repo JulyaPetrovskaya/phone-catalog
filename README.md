@@ -35,6 +35,5 @@ Technologies used:
 5.  Sorting: Sort products based on criterias: year, price, alphabeticaly.
 6.  Search: Filter products using query parameters.
 7.  Pagination: Navigate through large lists of products, opportunity to choose number of items per page, and number of pages depends on this.
-8.  Sticky Header: Keeps the header visible as you scroll.
-9.  Scroll to Top Button: Easily return to the top of the page.
-10.  Loader: Indicates loading status for a better user experience.
+8.  Scroll to Top Button: Easily return to the top of the page.
+9.  Loader: Indicates loading status for a better user experience.
