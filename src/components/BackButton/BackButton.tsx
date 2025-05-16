@@ -7,7 +7,7 @@ export const BackButton: React.FC = () => {
   const navigate = useNavigate();
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate('/phones');
   };
 
   return (
