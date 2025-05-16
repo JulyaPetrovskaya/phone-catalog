@@ -2,7 +2,8 @@ Its a figma page for Phone catalog. -[figma](https://www.figma.com/design/uEetgW
 
 Link to preview on github pages:
 
-- [DEMO LINK](https://julyapetrovskaya.github.io/phone-catalog)
+Project Name 
+### Phone catalog 📱 - [DEMO LINK] (https://julyapetrovskaya.github.io/phone-catalog)
 
 Technologies used:
 
@@ -36,4 +37,8 @@ Technologies used:
 6.  Search: Filter products using query parameters.
 7.  Pagination: Navigate through large lists of products, opportunity to choose number of items per page, and number of pages depends on this.
 8.  Scroll to Top Button: Easily return to the top of the page.
+<<<<<<< HEAD
 9.  Loader: Indicates loading status for a better user experience.
+=======
+9.  Loader: Indicates loading status for a better user experience.
+>>>>>>> 334b972 (readmy)
