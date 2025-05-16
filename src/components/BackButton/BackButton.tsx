@@ -1,13 +1,34 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import './BackButton.scss';
 
 import ArrowLeft from '../../Images/Icons/ArrowLeft.svg';
 
 export const BackButton: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleGoBack = () => {
-    navigate('/phones');
+    const path = location.pathname.toLowerCase();
+
+    if (path.startsWith('/phones')) {
+      navigate('/phones');
+
+      return;
+    }
+
+    if (path.startsWith('/tablets')) {
+      navigate('/tablets');
+
+      return;
+    }
+
+    if (path.startsWith('/accessories')) {
+      navigate('/accessories');
+
+      return;
+    }
+
+    navigate(-1);
   };
 
   return (
