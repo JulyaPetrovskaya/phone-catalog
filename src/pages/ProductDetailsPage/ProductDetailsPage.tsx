@@ -86,8 +86,7 @@ export const ProductDetailsPage = () => {
   };
 
   const fetchData = async () => {
-    setIsLoading(true);
-
+    // setIsLoading(true);
     try {
       let productsDetails: ProductWithDetails[] = [];
 
@@ -139,14 +138,15 @@ export const ProductDetailsPage = () => {
       setCurrentImage(currentProduct.image);
     } catch (err) {
       setError('Error fetching product details');
+      setIsLoading(false);
     } finally {
       setIsLoading(false);
     }
   };
 
   const fetchShuffledProducts = async () => {
-    setIsShufflLoading(true);
     try {
+      setIsShufflLoading(true);
       const shuffledProducts = await getShuffleProducts();
 
       setProducts(shuffledProducts);
@@ -158,7 +158,6 @@ export const ProductDetailsPage = () => {
   };
 
   useEffect(() => {
-    setIsLoading(true);
     fetchData();
   }, [productId, category]);
 
